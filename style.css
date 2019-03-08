@@ -13,12 +13,6 @@
     margin: 0;
   }
 
-  .main-container {
-    display: grid;
-    grid-template-areas:
-
-  }
-
   a {
     color: transparent;
   }
@@ -30,7 +24,6 @@
     margin: 0;
     height: 4em;
     display: flex;
-    width: 100%;
     flex-direction: row;
     justify-content: flex-end;
 
@@ -77,6 +70,13 @@
 
 /* BEGIN GRID  */
 
+  .grid {
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    grid-auto-rows: minmax(20px, auto);
+
+  }
+
   .sidebar-nav {
     background-color: #4c4c72;
     display: flex;
@@ -105,11 +105,44 @@
 
   }
 
-  .grid-container {
-    display: grid;
-    max-width: auto;
-    /* grid-template-rows: 5.25rem 400px; */
-    grid-template-columns: 1fr;
-    grid-auto-rows: minmax(20px, auto);
+  /* GRID AREAS */
 
+  .dashboard {
+    grid-area: dashboard;
+  }
+
+  .sidebar-nav {
+    grid-area: sidebar;
+  }
+
+  .traffic {
+    grid-area: traffic;
+  }
+
+  .daily-traffic {
+    grid-area: daily;
+  }
+
+  .mobile-users {
+    grid-area: mobile;
+  }
+
+  .social-stats {
+    grid-area: social;
+  }
+
+  .new-members {
+    grid-area: new;
+  }
+
+  .recent-activity {
+    grid-area: recent;
+  }
+
+  .message-user {
+    grid-area: message;
+  }
+
+  .settings {
+    grid-area: settings;
   }
