@@ -72,8 +72,19 @@
 
   .grid {
     display: grid;
-    /* grid-template-columns: 1fr; */
+    grid-template-columns: 2fr;
     grid-auto-rows: minmax(20px, auto);
+    grid-template-areas:
+    "header"
+    "sidebar"
+    "dashboard"
+    "traffic"
+    "daily"
+    "mobile"
+    "social"
+    "new"
+    "recent"
+    "message"
 
   }
 
