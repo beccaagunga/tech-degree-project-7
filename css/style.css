@@ -3,7 +3,6 @@
   }
 
   body {
-    background: grey;
     font-family: 'Helvetica Nueve', sans-serif;
     font-size: 1em;
     margin: 0;
@@ -78,6 +77,7 @@
     "header"
     "sidebar"
     "dashboard"
+    "search"
     "traffic"
     "daily"
     "mobile"
@@ -85,11 +85,10 @@
     "new"
     "recent"
     "message"
-
   }
 
   .sidebar-nav {
-    background-color: #4c4c72;
+    background-color: rgb(75, 75, 113);
     display: flex;
     justify-content: center;
 
@@ -105,6 +104,25 @@
 
   }
 
+  .search-icon {
+    margin-left: -50px;
+    margin-top: 5px;
+    position: relative;
+    opacity: .5;
+  }
+
+  .alert {
+    background-color: #7377bf;
+    border-radius: 5px;
+    width: 80%;
+    margin: 1rem 1rem;
+    color: #fff;
+    font-weight: lighter;
+    font-size: .8em;
+    padding: 5px;
+
+  }
+
   .dashboard-icon,
   .members-icon,
   .visits-icon,
@@ -113,13 +131,43 @@
     height: 40px;
     display: inline-flex;
     margin: 0 2rem;
+  }
 
+  .traffic li {
+    display: inline-block;
+    margin: 0 5px;
+    font-weight: bold;
+  }
+
+  .traffic li:nth-last-child(1) {
+    margin-right: 4em;
+  }
+
+  .traffic ul {
+      text-align: right;
+  }
+
+  .green {
+    background-color: #81c98f;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
   }
 
   /* GRID AREAS */
 
   .dashboard {
     grid-area: dashboard;
+  }
+
+  .search-bar {
+    grid-area: search;
+    border-radius: 5px;
+    padding: 8px;
+    width: 80%;
+    margin: 1rem 1rem;
+    border-style: solid;
+    border-color: grey;
   }
 
   .sidebar-nav {
@@ -132,6 +180,7 @@
 
   .daily-traffic {
     grid-area: daily;
+    /* width: 80%; */
   }
 
   .mobile-users {
@@ -157,3 +206,57 @@
   .settings {
     grid-area: settings;
   }
+
+/* CHARTS */
+
+.chart-container {
+  margin: 2rem;
+  width: 80vw;
+}
+
+/* SVG */
+
+
+
+/* SOCIAL CARDS */
+
+
+.widget {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f4f4f4;
+  margin: 1rem 3rem;
+  padding: 20px;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  position: relative;
+}
+
+
+.social-stats svg {
+  background-color: #7477bf;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  align-self: flex-start;
+
+}
+
+
+.card-header {
+  text-transform: uppercase;
+  margin-left: 1rem;
+  color: grey;
+  font-size: 1rem;
+}
+
+.social-card {
+  color: #7377bf;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.social-data {
+  color: black;
+  font-size: 1.8rem;
+}
