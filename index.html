@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-
   </head>
 
   <body>
 <!-- HEADER -->
   <div class="grid">
-    <header class="header">
+
+    <header>
       <h1><b>Your</b>App&trade;</h1>
 <!--- BELL ICON-->
       <img
@@ -29,12 +29,8 @@
 <!-- END HEADER -->
 
 
-<!-- END SIDEBAR -->
-
-
-
 <!--SIDEBAR NAV-->
-        <div class="sidebar-nav">
+        <nav class="grid-1">
           <ul>
             <a href="#"><li>
               <?xml version="1.0" encoding="utf-8"?>
@@ -125,29 +121,26 @@
             </li>
             </a>
           </ul>
-        </div>
+        </nav>
 
 
 <!-- END NAV -->
 
 
-      <div class="dashboard">
+        <div class="grid-2">
         <h1>Dashboard</h1>
           <div class="search-container">
             <input class="search-bar" type="text" placeholder="Search" id="search">
             <i class="search-icon fas fa-search"></i>
           </div>
 
-          <div class="dashboard-chart">
-
           <div class="alert">
             <p><b>Alert</b> Nallum quis risus egat urna mollis ornare e leo. Nallum d dolor id nibh ultricies vehiclua ut id elit. Curbitur blandit tempus porttitor.</p>
-
+            <span class="cross">X</span>
           </div>
 
-          <div class="traffic">
             <h2 class="card-header">Traffic</h2>
-            <ul>
+            <ul class="time">
               <li>Hourly</li>
               <li>Daily</li>
               <li class="green">Weekly</li>
@@ -161,10 +154,11 @@
           </div>
 
 
+
 <!-- END TRAFFIC CARD -->
 
 
-          <div class="daily-traffic">
+          <div class="grid-3">
             <h2 class="card-header">Daily Traffic</h2>
             <div class="chart-container">
               <canvas class="barChartBox" id="dailytrafficChart"></canvas>
@@ -175,7 +169,7 @@
 <!-- END DAILY TRAFFIC CARD -->
 
 
-          <div class="mobile-users">
+          <div class="grid-4">
             <h2 class="card-header">Mobile Users</h2>
             <div class="chart-container">
               <canvas class="doughnutChartBox" id="mobileUsersChart"></canvas>
@@ -186,7 +180,7 @@
 <!-- END MOBILE USERS CARD -->
 
 
-          <div class="social-stats">
+          <div class="grid-5">
             <h2 class="card-header">Social Stats</h2>
               <div class="widget">
                 <?xml version="1.0" encoding="utf-8"?>
@@ -239,33 +233,33 @@
 
 <!-- END SOCIAL STATS CARD -->
 
-          <div class="new-members">
+          <div class="grid-6">
           <h2 class="card-header">New Members</h2>
             <ul>
               <li class="member">
                 <img class="avatar" src="images/member-1.jpg" alt="member">
-                <p class="name">Victoria Chambers</p>
+                <p class="name">Victoria Chambers</p><br>
                 <p class="email">victoria.chambers80@example.com </p>
                 <p class="date">10/15/15</p>
               </li>
 
               <li class="member">
                 <img class="avatar" src="images/member-2.jpg" alt="member">
-                <p class="name">Dale Byrd</p>
+                <p class="name">Dale Byrd</p><br>
                 <p class="email"> dale.byrd52@example.com</p>
                 <p class="date">10/15/15</p>
               </li>
 
               <li class="member">
                 <img class="avatar" src="images/member-3.jpg" alt="member">
-                <p class="name">Dawn Wood</p>
+                <p class="name">Dawn Wood</p><br>
                 <p class="email">dawn.wood16@example.com</p>
                 <p class="date">10/15/15</p>
               </li>
 
               <li class="member">
                 <img class="avatar" src="images/member-4.jpg" alt="member">
-                <p class="name">Dan Oliver</p>
+                <p class="name">Dan Oliver</p><br>
                 <p class="email">dan.oliver82@example.com</p>
                 <p class="date">10/15/15</p>
               </li>
@@ -276,35 +270,35 @@
 <!-- END NEW MEMBERS CARD -->
 
 
-          <div class="recent-activity">
+          <div class="grid-7">
             <h2 class="card-header">Recent Activity</h2>
               <ul>
                 <li>
                 <img class="avatar" src="images/member-1.jpg" alt="member">
                 <p>Victoria Chambers commented on YourApp's SEO Tips</p>
                 <p>4 hours ago</p>
-                <i class="fas fa-greater-than"></i>
+                <i class="fas fa-greater-than arrow"></i>
                 </li>
 
                 <li>
                   <img class="avatar" src="images/member-2.jpg" alt="member">
                   <p>Dale Byrd liked the post Facebook's Changes for 2016</p>
                   <p>5 hours ago</p>
-                  <i class="fas fa-greater-than"></i>
+                  <i class="fas fa-greater-than arrow"></i>
                 </li>
 
                 <li>
                   <img class="avatar" src="images/member-3.jpg" alt="member">
                   <p>Dawn Wood commented on Facebook's Changes for 2016</p>
                   <p>5 hours ago</p>
-                  <i class="fas fa-greater-than"></i>
+                  <i class="fas fa-greater-than arrow"></i>
                 </li>
 
                 <li>
                   <img class="avatar" src="images/member-4.jpg" alt="member">
                   <p>Dan Oliver posted to YourApp's SEO Tips</p>
                   <p>1 day ago</p>
-                  <i class="fas fa-greater-than"></i>
+                  <i class="fas fa-greater-than arrow"></i>
                 </li>
               </ul>
           </div>
@@ -313,10 +307,10 @@
 <!-- END RECENT ACTIVITY CARD -->
 
 
-          <div class="message-user">
+          <div class="grid-8">
             <h2 class="card-header">Message User</h2>
-            <input class="search-for-user" type="text" placeholder="Search" id="search-for-user">
-            <input class="message" type="text" placeholder="Search" id="message">
+            <input class="search-for-user" type="text" placeholder="Search for User" id="search-for-user">
+            <input class="message" type="text" placeholder="Message for User" id="message">
             <button class="send" type="submit" id="send">Send</button>
           </div>
 
@@ -324,7 +318,7 @@
 <!-- END MESSAGE USER CARD -->
 
 
-          <div class="settings">
+          <div class="grid-9">
             <h2 class="card-header">Settings</h2>
             <!-- Rounded switch -->
               <label class="switch">Send Email Notifications
@@ -337,7 +331,7 @@
                 <span class="slider round"></span>
               </label><br>
             <!-- Timezone Dropdown -->
-            <select class="timezone-dropdown" id="timezone" name="user_timezone">
+            <select class="dropdown" id="timezone" name="user_timezone">
               <option value="" disabled selected="selected">Select Timezone</option>
               <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
             	<option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
@@ -384,11 +378,11 @@
             <button class="save" type="submit" id="save">Save</button>
             <button class="cancel" type="submit" id="cancel">Cancel</button>
           </div>
-        </div>
       </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
     <script src="js/script.js"></script>
+
+
   </body>
   </html>
