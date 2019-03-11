@@ -91,3 +91,6 @@ let doughnutUsersChart = new Chart(doughnutChart, {
         },
     }
     });
+
+
+Chart.defaults.global.responsive = true;
