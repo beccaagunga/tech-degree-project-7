@@ -1,3 +1,4 @@
+
   * {
     box-sizing: border-box;
   }
@@ -9,14 +10,16 @@
   }
 
   h1 {
-    margin: 0;
+    margin: 1em;
+    font-weight: lighter;
+    width: 50%;
   }
 
   a {
     color: transparent;
   }
 
-/*  BEGIN HEADER */
+/* HEADER */
 
   header {
     background-color: #7377bf;
@@ -25,14 +28,14 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-
+    width: 100%;
   }
 
   header h1 {
     align-self: center;
     margin-right: auto;
     margin-left: 25px;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 200;
     color: #fff;
   }
@@ -40,7 +43,7 @@
   header p {
     align-self: center;
     margin-left: 15px;
-    margin-right: 25px;
+    margin-right: 20px;
     color: #fff;
   }
 
@@ -56,95 +59,48 @@
     height: 35px;
     border-radius: 20px;
     margin-left: 25px;
-
   }
 
   img.bell-icon,
   img.avatar {
     align-self: center;
-    margin-left:
   }
 
-/*  END HEADER */
+/* NAV */
 
-/* BEGIN GRID  */
-
-  .grid {
-    display: grid;
-    grid-template-columns: 2fr;
-    grid-auto-rows: minmax(20px, auto);
-    grid-template-areas:
-    "header"
-    "sidebar"
-    "dashboard"
-    "search"
-    "traffic"
-    "daily"
-    "mobile"
-    "social"
-    "new"
-    "recent"
-    "message"
-  }
-
-  .sidebar-nav {
+  nav {
     background-color: rgb(75, 75, 113);
     display: flex;
     justify-content: center;
-
+    width: 100%;
   }
 
-  .sidebar-nav ul {
-    padding: 0;
-    list-style-type: none;
-  }
-
-  .sidebar-nav li {
-    display: inline-block;
-
-  }
-
-  .search-icon {
-    margin-left: -50px;
-    margin-top: 5px;
-    position: relative;
-    opacity: .5;
-  }
-
-  .alert {
-    background-color: #7377bf;
-    border-radius: 5px;
-    width: 80%;
-    margin: 1rem 1rem;
-    color: #fff;
-    font-weight: lighter;
-    font-size: .8em;
-    padding: 5px;
-
-  }
+  .grid-1 li {
+   display: inline-block;
+ }
 
   .dashboard-icon,
   .members-icon,
   .visits-icon,
   .settings-icon {
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    margin: 0 2rem;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    margin: 0 1.5rem;
   }
 
-  .traffic li {
+  .grid-2 li {
     display: inline-block;
     margin: 0 5px;
     font-weight: bold;
   }
 
-  .traffic li:nth-last-child(1) {
+  .grid-2 li:nth-last-child(1) {
     margin-right: 4em;
   }
 
-  .traffic ul {
-      text-align: right;
+  .time {
+    text-align: right;
   }
 
   .green {
@@ -154,109 +110,432 @@
     padding: 10px;
   }
 
-  /* GRID AREAS */
-
-  .dashboard {
-    grid-area: dashboard;
-  }
-
-  .search-bar {
-    grid-area: search;
+  .alert {
+    background-color: #7377bf;
+    color: white;
     border-radius: 5px;
-    padding: 8px;
+    font-size: 1em;
+    width: 85%;
+    margin: 2em;
+  }
+
+  .search-bar,
+  .alert {
     width: 80%;
-    margin: 1rem 1rem;
-    border-style: solid;
-    border-color: grey;
+    margin: 1em 2em;
   }
 
-  .sidebar-nav {
-    grid-area: sidebar;
+  .search-icon {
+    margin-left: -4em;
   }
 
-  .traffic {
+  .chart-container {
+    width: 50vw;
+    position: relative;
+  }
+
+  .widget {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f4f4f4;
+    margin: 1rem 3rem;
+    padding: 20px;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    position: relative;
+}
+
+  .grid-5 svg {
+    background-color: #7477bf;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    align-self: flex-start;
+
+  }
+
+  .card-header {
+    text-transform: uppercase;
+    margin-left: 1rem;
+    color: grey;
+    font-size: 1rem;
+  }
+
+  .social-card {
+    color: #7377bf;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  .social-data {
+    color: black;
+    font-size: 1.8rem;
+  }
+
+  .search-for-user {
+    padding: 1em;
+    display: block;
+    width: 80%;
+    margin: 1em;
+    border-radius: 5px;
+    background-color: rgb(219, 218, 218);
+    border-style: none;
+  }
+
+  .message {
+    padding: 1em;
+    height: 200px;
+    width: 80%;
+    margin: 1em;
+    border-radius: 5px;
+    background-color: rgb(219, 218, 218);
+    border-style: none;
+  }
+
+  .send,
+  .save {
+    display: block;
+    width: 80%;
+    margin: 1em;
+    background-color: rgb(75, 75, 113);
+    padding: 1em;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .cancel {
+    display: block;
+    width: 80%;
+    margin: 1em;
+    background-color: rgb(181, 181, 181);
+    padding: 1em;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .dropdown {
+    width: 80%;
+    margin: 1em;
+    padding: 2em;
+    font-size: 1.15em;
+    border-radius: 5px;
+    background-color: rgb(181, 181, 181);
+    color: white;
+  }
+
+  .grid-6 li {
+    list-style-type: none;
+    border-bottom: 1px solid grey;
+    padding: 1rem;
+    width: 80%;
+    margin: 1em;
+    font-size: .75em;
+    line-height: .25;
+  }
+
+  .grid-6 ul {
+    margin: 0;
+  }
+
+   .grid-6 p {
+     display: inline-block;
+     line-height: .1;
+   }
+
+   .date,
+   .arrow {
+     float: right;
+     margin-top: -1em;
+     position: relative;
+
+   }
+
+   .grid-6 img,
+   .grid-7 img {
+     width: 40px;
+     height: 40px;
+     display: inline-block;
+     margin: 0;
+   }
+
+   .email {
+     color: #7377bf;
+     margin: 0 3.7em;
+   }
+
+   .grid-7 li {
+     list-style-type: none;
+     border-bottom: 1px solid grey;
+     padding: 1rem;
+     width: 80%;
+     margin: 1em;
+     font-size: .75em;
+     line-height: 1;
+   }
+
+   .arrow {
+     color: rgb(181, 181, 181);
+   }
+
+   .grid-7 img {
+     display: inline-block;
+   }
+
+
+
+
+
+   /* GRID */
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(20px, auto);
+    grid-template-areas:
+    "header"
+    "nav"
+    "traffic"
+    "daily"
+    "mobile"
+    "social"
+    "new"
+    "recent"
+    "message"
+    "settings"
+  }
+
+
+  header {
+    grid-area: header;
+  }
+
+  nav {
+    grid-area: nav;
+  }
+
+  .grid-2 {
     grid-area: traffic;
   }
 
-  .daily-traffic {
+  .grid-3 {
     grid-area: daily;
-    /* width: 80%; */
   }
 
-  .mobile-users {
+  .grid-4 {
     grid-area: mobile;
   }
 
-  .social-stats {
+  .grid-5 {
     grid-area: social;
   }
 
-  .new-members {
+  .grid-6 {
     grid-area: new;
   }
 
-  .recent-activity {
+  .grid-7 {
     grid-area: recent;
   }
 
-  .message-user {
+  .grid-8 {
     grid-area: message;
   }
 
-  .settings {
+  .grid-9 {
     grid-area: settings;
   }
 
-/* CHARTS */
+/* TABLET */
+@media (min-width: 762px) {
+  body {
+    /* background-color: red; */
+  }
 
-.chart-container {
-  margin: 2rem;
-  width: 80vw;
+  .search-bar,
+  .alert {
+    width: 80%;
+    margin: 1em 2em;
+  }
+
+  .search-icon {
+    margin-left: -4em;
+  }
+
+  .search-for-user {
+    padding: 1em;
+    display: block;
+    width: 80%;
+    margin: 1em 3em;
+    border-radius: 5px;
+  }
+
+  .message {
+    padding: 1em;
+    height: 200px;
+    width: 80%;
+    border-radius: 5px;
+    margin: 1em 3em;
+  }
+
+  .send {
+    display: block;
+    width: 80%;
+    margin: 1em 3em;
+    background-color: rgb(75, 75, 113);
+    padding: 1em;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .save,
+  .cancel,
+  .dropdown {
+    margin: 1em 3em;
+  }
+
 }
 
-/* SVG */
+
+@media (min-width: 900px) {
+
+  .grid {
+    display: grid;
+    grid-template-columns: .12fr repeat(2, 1fr);
+    /* grid-template-rows: minmax(20px, auto); */
+    grid-template-areas:
+    "header     header         header"
+    "nav        traffic       traffic"
+    "nav         daily         mobile"
+    "nav         social       social"
+    "nav         new           recent"
+    "nav         message       settings"
+  }
+
+
+  .grid-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 4rem;
+  }
+  .grid-1 li {
+   margin: 2rem 1rem;
+   margin-left: -3rem;
+ }
+
+ .search-container {
+   display: flex;
+   justify-content: flex-end;
+   margin-top: -1rem;
+ }
+
+ .search-bar {
+   padding: .5rem;
+   width: 30%;
+   border-radius: 5px;
+ }
+
+ .search-icon {
+  margin-left: -2rem;
+  margin-top: .75rem;
+ }
+
+
+ .grid-6 li {
+   list-style-type: none;
+   border-bottom: 1px solid grey;
+   padding: 1rem;
+ }
+
+  .grid-6 p {
+    display: inline-block;
+    line-height: .1;
+  }
+
+  .date {
+    float: right;
+  }
+
+  .grid-6 img,
+  .grid-7 img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .arrow {
+    float: right;
+  }
+
+  .grid-7 li {
+    list-style-type: none;
+     border-bottom: 1px solid grey;
+  }
+
+  .grid-7 p {
+    line-height: .82;
+  }
+
+  .search-for-user {
+    display: block;
+    padding: 1rem;
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .message {
+    display: block;
+    padding: 2rem;
+    width: 80%;
+    margin: auto;
+  }
+
+  .send {
+    width: 80%;
+    padding: 1rem;
+    background-color: rgb(75, 75, 113);
+    color: white;
+    margin: 3rem 4rem;
+    border-radius: 5px;
+  }
+
+  .save {
+    width: 30%;
+    background-color: rgb(75, 75, 113);
+    padding: 1rem;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .cancel {
+    width: 30%;
+    background-color: grey;
+    padding: 1rem;
+    color: white;
+    border-radius: 5px;
+  }
+
+  .save,
+  .cancel {
+    margin: 2rem;
+  }
+
+  .dropdown  {
+    border-radius: 5px;
+    width: 80%;
+    margin: 2rem;
+  }
+
+  .widget {
+    width: 250px;
+    height: 100px;
+    display: inline-block;
+  }
+
+  .widget svg {
+  }
 
 
 
-/* SOCIAL CARDS */
 
 
-.widget {
-  display: flex;
-  justify-content: space-around;
-  background-color: #f4f4f4;
-  margin: 1rem 3rem;
-  padding: 20px;
-  border: 1px solid #cecece;
-  border-radius: 5px;
-  position: relative;
-}
-
-
-.social-stats svg {
-  background-color: #7477bf;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  align-self: flex-start;
-
-}
-
-
-.card-header {
-  text-transform: uppercase;
-  margin-left: 1rem;
-  color: grey;
-  font-size: 1rem;
-}
-
-.social-card {
-  color: #7377bf;
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-
-.social-data {
-  color: black;
-  font-size: 1.8rem;
 }
