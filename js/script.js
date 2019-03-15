@@ -94,3 +94,42 @@ let doughnutUsersChart = new Chart(doughnutChart, {
 
 
 Chart.defaults.global.responsive = true;
+
+
+// HIDE ALERT //
+
+const cross = document.querySelector('.cross');
+
+cross.addEventListener ('click', () => {
+    cross.parentNode.style.display = "none";
+});
+
+
+// MESSAGE USER //
+
+let messageForm = document.querySelector('.message-user');
+
+
+messageForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let inputValue = messageForm.querySelector('input').value;
+  let textareaValue = messageForm.querySelector('textarea').value;
+  console.log(inputValue);
+  // check for entry
+  if(inputValue !== ""  && textareaValue !== ""){
+    // show the message
+    alert("Your message has been sent to " + inputValue + ".");
+    // clear both fields
+    messageForm.querySelector('input').value = "";
+    messageForm.querySelector('textarea').value = "";
+  }
+
+
+  if(inputValue === "" && textareaValue !== "") {
+      alert("Please enter a recipient.");
+    } else if(inputValue !== "" && textareaValue === "") {
+      alert("Please enter a message for " + inputValue + ".");
+    } else if(inputValue === "" && textareaValue === ""){
+      alert("You must enter a message and recipient.");
+  }
+});
