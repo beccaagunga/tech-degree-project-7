@@ -1,3 +1,4 @@
+/*************** BASE STYLES ****************/
 
   * {
     box-sizing: border-box;
@@ -19,7 +20,7 @@
     color: transparent;
   }
 
-/* HEADER */
+/*************** HEADER ****************/
 
   header {
     background-color: #7377bf;
@@ -71,10 +72,18 @@
     align-self: center;
   }
 
-/* NAV */
+  .circle {
+    height: 10px;
+    width: 10px;
+    background-color: #5ee38b;
+    border-radius: 50%;
+    margin: 8px 0 0 -20px;
+  }
+
+/*************** NAV ****************/
 
   nav {
-    background-color: rgb(75, 75, 113);
+    background-color: #4b4b71;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -92,30 +101,10 @@
     height: 30px;
     display: flex;
     margin: 0 1.5rem;
-
   }
 
-  .grid-2 li {
-    display: inline-block;
-    margin: 0 5px;
-    font-weight: bold;
-  }
 
-  .grid-2 li:nth-last-child(1) {
-    margin-right: 3em;
-  }
-
-  .time {
-    text-align: right;
-    font-size: 1em;
-  }
-
-  .green {
-    background-color: #81c98f;
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
-  }
+/*************** SEARCH & ALERT ****************/
 
   .alert {
     background-color: #7377bf;
@@ -123,6 +112,11 @@
     border-radius: 5px;
     width: 85%;
     margin: 1em;
+  }
+
+  .alert-container {
+    display: flex;
+    justify-content: space-between;
   }
 
   .cross {
@@ -143,14 +137,11 @@
     padding: .75em;
   }
 
-  .alert-container {
-    display: flex;
-    justify-content: space-between;
-  }
-
   .search-icon {
     margin-left: -4em;
   }
+
+/*************** TRAFFIC CHART ****************/
 
   .line-container {
     width: 90vw;
@@ -161,6 +152,30 @@
     width: 90vw;
     position: relative;
   }
+
+  .time {
+    text-align: right;
+    font-size: 1em;
+  }
+
+  .grid-2 li {
+    display: inline-block;
+    margin: 0 5px;
+    font-weight: bold;
+  }
+
+  .grid-2 li:nth-last-child(1) {
+    margin-right: 3em;
+  }
+
+  .green {
+    background-color: #81c98f;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+/*************** SOCIAL STATS ****************/
 
   .widget {
     display: flex;
@@ -185,7 +200,6 @@
     font-size: 1.2rem;
   }
 
-
   .social-icon {
     background-color: #7477bf;
     transform-origin: 50% 50%;
@@ -194,27 +208,25 @@
     border-radius: 50%;
   }
 
-  .widget path {
-
+  .social-info p:first-child {
+    color: #7477bf;
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
   }
 
-.social-info p:first-child {
-  color: #7477bf;
-  font-weight: 700;
-  margin: 0;
-  text-align: left;
-}
+  .social-info p:last-child {
+    color: #777;
+    font-weight: 300;
+    text-align: right;
+  }
 
-.social-info p:last-child {
-  color: #777;
-  font-weight: 300;
-  text-align: right;
-}
+  .data {
+    font-size: 2.5rem;
+    margin: 0;
+  }
 
-.data {
-  font-size: 2.5rem;
-  margin: 0;
-}
+/*************** MESSAGE USER ****************/
 
   .search-for-user {
     padding: 1em;
@@ -229,7 +241,6 @@
   .message {
     padding: 1em;
     width: 80%;
-    height: minmax(200px);
     margin: 1em 2em;
     border-radius: 5px;
     background-color: rgb(219, 218, 218);
@@ -245,6 +256,19 @@
     padding: 1em;
     color: white;
     border-radius: 5px;
+  }
+
+/*************** SETTINGS ****************/
+
+  .setting {
+    display: block;
+    margin: .75em;
+  }
+
+  .setting-container {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
   }
 
   .cancel {
@@ -267,135 +291,107 @@
     color: white;
   }
 
-   .arrow {
-     color: rgb(181, 181, 181);
-   }
+    /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin: 1em;
+    padding: 1em;
 
-  .setting {
-    display: block;
-    margin: .75em;
   }
 
-  .setting-container {
-    display: flex;
-    justify-content: space-between;
-    width: 95%;
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
   }
 
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+  }
 
-  /* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-  margin: 1em;
-  padding: 1em;
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+  }
 
-}
+  input:checked + .slider {
+    background-color: rgb(75, 75, 113);
+  }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+  input:focus + .slider {
+    box-shadow: 0 0 1px rgb(75, 75, 113);
+  }
 
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
 
-input:checked + .slider {
-  background-color: rgb(75, 75, 113);
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px rgb(75, 75, 113);
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
+  .slider.round:before {
+    border-radius: 50%;
+  }
 
 /******** NEW MEMBERS ********/
 
-.grid-6 {
-  /* width: 80%; */
-  /* margin-left: 2rem; */
-}
+  .member img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
 
+  .member {
+    display: flex;
+    justify-content: space-between;
+    font-size: 70%;
+    padding: 10px;
+  }
 
-.member img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
+  .member:not(:last-of-type){
+    border-bottom: 1px solid #cecece;
+    margin-bottom: 20px;
+  }
 
-.member {
-  display: flex;
-  justify-content: space-between;
-  font-size: 70%;
-  padding: 10px;
-}
+  .member
+  .name,
+  .date,
+  .symbol {
+    margin-top: 6px;
+  }
 
-.member:not(:last-of-type){
-  border-bottom: 1px solid #cecece;
-  margin-bottom: 20px;
-}
+  .member
+  .name a {
+    text-decoration: none;
+    display: block;
+    color: #7477bf;
+  }
 
-.member
-.name,
-.date,
-.symbol {
-  margin-top: 6px;
-}
-
-.member
-.name a {
-  text-decoration: none;
-  display: block;
-  color: #7477bf;
-}
-
-.member
-.info {
-  display: flex;
-}
-
-
+  .member
+  .info {
+    display: flex;
+  }
 
 /************ RECENT ACTIVITY *************/
 
@@ -403,34 +399,28 @@ input:checked + .slider:before {
     width: 100%;
   }
 
+  .member
+  .info {
+    width: 80%;
+  }
 
-.member
-.info {
-  width: 80%;
-}
+  .post-time {
+    font-style: italic;
+    font-size: 80%;
+  }
 
-.info {
+  .symbol p {
+    font-size: 260%;
+    color: #7477bf;
+    font-weight: 300;
+  }
 
-}
-
-.post-time {
-  font-style: italic;
-  font-size: 80%;
-}
-
-.symbol p {
-  font-size: 260%;
-  color: #7477bf;
-  font-weight: 300;
-}
-
- .grid-7 h2,
- .grid-6 h2 {
-   /* margin-right: 1rem; */
- }
+  .arrow {
+    color: rgb(181, 181, 181);
+  }
 
 
-   /************ GRID ************/
+/************ GRID *************/
 
   .grid {
     display: grid;
@@ -448,7 +438,6 @@ input:checked + .slider:before {
     "message"
     "settings"
   }
-
 
   header {
     grid-area: header;
@@ -472,6 +461,7 @@ input:checked + .slider:before {
 
   .grid-4 {
     grid-area: mobile;
+    padding: 1rem;
     border-top: 1px solid #b2b2b2;
   }
 
@@ -486,7 +476,6 @@ input:checked + .slider:before {
     grid-area: new;
     padding: 1rem;
     border-right: 1px solid #b2b2b2;
-    /* border-top: 1px solid #b2b2b2; */
   }
 
   .grid-7 {
@@ -507,25 +496,27 @@ input:checked + .slider:before {
     border-top: 1px solid #b2b2b2;
   }
 
-/* TABLET */
+
+/*************** MEDIA QUERIES ****************/
+
+
+/*************** TABLET ****************/
 @media (min-width: 762px) {
-  body {
 
-}
 
-.line-container {
-  width: 90vw;
-  position: relative;
-}
+  .line-container {
+    width: 90vw;
+    position: relative;
+  }
 
-.other-container {
-  width: 60vw;
-  position: relative;
-  top: 0;
-  bottom: 25%;
-  right: 25%;
-  left: 25%;
-}
+  .other-container {
+    width: 60vw;
+    position: relative;
+    top: 0;
+    bottom: 25%;
+    right: 25%;
+    left: 25%;
+  }
 
   .search-bar,
   .alert {
@@ -569,18 +560,17 @@ input:checked + .slider:before {
   }
 
   .social-widgets {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .widget {
+    width: 30%;
+  }
+
 }
 
-.widget {
-  width: 30%;
-}
-
-
-}
-
-/* DESKTOP  */
+/*************** DESKTOP ****************/
 
 @media (min-width: 1024px) {
 
@@ -595,7 +585,6 @@ input:checked + .slider:before {
     "nav         new           recent"
     "nav         message       settings"
   }
-
 
   .grid-1 {
     display: flex;
@@ -633,7 +622,6 @@ input:checked + .slider:before {
    padding: .5rem;
    width: 30%;
    border-radius: 5px;
-
  }
 
  .search-icon {
@@ -647,10 +635,6 @@ input:checked + .slider:before {
     width: 80%;
     margin: 2rem auto;
   }
-
-  /* .member-container {
-    margin: 0;
-  } */
 
   .message {
     display: block;
@@ -704,8 +688,3 @@ input:checked + .slider:before {
   .grid-4 {
     border: none;
   }
-
-  /* .data {
-    font-size: 2.5rem;
-    margin: 0;
-  } */
